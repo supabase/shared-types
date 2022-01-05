@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "./out",
     "allowJs": true,
-    "strict": true,
-    "target": "es2019",
-    "moduleResolution": "node",
-    "module": "CommonJS",
-    "lib": ["es2020", "DOM"],
-    "skipLibCheck": true,
     "baseUrl": "src",
-    "esModuleInterop": true
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["es2020", "DOM"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "./out",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2019"
   },
   "include": ["./src/**/*"]
 }

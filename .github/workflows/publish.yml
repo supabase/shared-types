@@ -1,0 +1,30 @@
+name: Run CI checks
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      # if the version hasn't changed, don't bother
+      - package.json
+
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 4
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: npm
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@supabase'
+
+      - run: npm ci
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}

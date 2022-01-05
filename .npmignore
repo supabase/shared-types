@@ -1,0 +1,4 @@
+.github
+.eslintignore
+.prettierrc
+tsconfig.json
