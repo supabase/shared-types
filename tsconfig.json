@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./out",
+    "allowJs": true,
+    "strict": true,
+    "target": "es2019",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "lib": ["es2020", "DOM"],
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "esModuleInterop": true
+  },
+  "include": ["./src/**/*"]
+}
