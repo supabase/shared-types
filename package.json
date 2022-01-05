@@ -1,12 +1,13 @@
 {
-  "name": "supabase-shared",
-  "version": "0.1.0",
+  "name": "@supabase/shared-types",
+  "version": "0.1.7",
   "description": "shared types for Supabase",
   "scripts": {},
   "author": "Supabase",
   "license": "Copyright Supabase",
   "scripts": {
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "prepare": "tsc"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.9.0",
@@ -16,5 +17,9 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "typescript": "^4.5.4"
-  }
+  },
+  "main": "./out/index.js",
+  "module": "./out/index.js",
+  "types": "./out/index.d.ts",
+  "repository": "git://github.com/supabase/shared-types.git"
 }
