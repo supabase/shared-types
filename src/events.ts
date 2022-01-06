@@ -5,6 +5,7 @@ export enum ProjectEvents {
   ProjectPaused = 'project.paused',
   ProjectRestored = 'project.restored',
   ProjectPendingShutdown = 'project.pending_shutdown_notification',
+  ProjectShutdownEligible = 'project.shutdown_eligible',
 
   PostgresqlRestart = 'postgresql.restart',
 }
