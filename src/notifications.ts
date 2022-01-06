@@ -5,6 +5,11 @@ export enum NotificationName {
   PostgresqlInformational = 'postgresql.informational',
 }
 
+export enum NotificationStatus {
+  New = 'new',
+  Seen = 'seen',
+}
+
 export enum Actions {
   UpgradeProjectToPro = 'project.upgrade-pro',
   UpgradeProjectToPayg = 'project.upgrade-payg',
@@ -34,4 +39,14 @@ export interface PostgresRestartRequired {
 
 export interface SharedMeta {
   actions: Actions[]
+}
+
+export interface Notification {
+  id: string
+  project_id: number
+  inserted_at: Date
+  notification_name: NotificationName
+  notification_status: NotificationStatus
+  data: any
+  meta: any
 }
