@@ -1,4 +1,5 @@
 export enum ServiceNames {
+  AdminApi = 'adminapi',
   Gotrue = 'gotrue',
   Kong = 'kong',
   Pgbouncer = 'pgbouncer',
