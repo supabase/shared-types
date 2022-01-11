@@ -6,13 +6,20 @@ export enum ProjectEvents {
   ProjectRestored = 'project.restored',
   ProjectPendingShutdown = 'project.pending_shutdown_notification',
   ProjectShutdownEligible = 'project.shutdown_eligible',
+  ProjectJwtSecretUpdated = 'project.jwt_secret_updated',
 
   PostgresqlRestart = 'postgresql.restart',
 }
 
 export interface RestartServicePayload {
-  service_names: ServiceNames[]
   project_id: number
+  service_names: ServiceNames[]
+}
+
+export interface UpdateConfigPayload {
+  project_id: number
+  service_names: ServiceNames[]
+  restart_services: boolean
 }
 
 export interface DismissNotificationsPayload {
