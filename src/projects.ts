@@ -41,3 +41,27 @@ export interface NewProjectInitializationPayload extends ProjectInitializationBa
 export interface RestoreProjectPayload extends ProjectInitializationBasePayload {
   backup_id: number
 }
+
+export enum BackupSchedulePayloadType {
+  Create = 'create',
+  Update = 'update',
+  Delete = 'delete',
+}
+
+export interface BackupScheduleBasePayload {
+  ref: string
+  payload_type: BackupSchedulePayloadType
+}
+
+export interface CreateBackupSchedulePayload extends BackupScheduleBasePayload {
+  time_of_day_utc: string // 'hh:mm:ss'
+}
+
+export interface UpdateBackupSchedulePayload extends BackupScheduleBasePayload {
+  schedule_id: string
+  time_of_day_utc: string // 'hh:mm:ss'
+}
+
+export interface DeletBackupSchedulePayload extends BackupScheduleBasePayload {
+  schedule_id: string
+}
