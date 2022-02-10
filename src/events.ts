@@ -7,6 +7,8 @@ export enum ProjectEvents {
   ProjectPendingShutdown = 'project.pending_shutdown_notification',
   ProjectShutdownEligible = 'project.shutdown_eligible',
   ProjectJwtSecretUpdated = 'project.jwt_secret_updated',
+  ProjectJwtSecretUpdateFailure = 'project.jwt_secret_update_failure',
+  ProjectJwtSecretUpdateProgress = 'project.jwt_secret_update_progress',
 
   PostgresqlRestart = 'postgresql.restart',
 }
