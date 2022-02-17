@@ -13,6 +13,27 @@ export enum ProjectEvents {
   PostgresqlRestart = 'postgresql.restart',
 }
 
+export enum JwtSecretUpdateStatus {
+  Updating,
+  Updated,
+  Failed,
+}
+
+export enum JwtSecretUpdateProgress {
+  Started,
+  RestartedPostgreSQL,
+  UpdatedAPIServicesConfiguration,
+  RestartedAPIServices,
+  UpdatedDatabaseAdminAPIConfiguration,
+}
+
+export enum JwtSecretUpdateError {
+  PostgreSQLRestartFailed,
+  APIServicesConfigurationUpdateFailed,
+  APIServicesRestartFailed,
+  DatabaseAdminAPIConfigurationUpdateFailed,
+  SupabaseAPIKeyUpdateFailed,
+}
 export interface RestartServicePayload {
   project_id: number
   service_names: ServiceNames[]
