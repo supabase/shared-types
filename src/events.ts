@@ -6,9 +6,31 @@ export enum ProjectEvents {
   ProjectRestored = 'project.restored',
   ProjectPendingShutdown = 'project.pending_shutdown_notification',
   ProjectShutdownEligible = 'project.shutdown_eligible',
-  ProjectJwtSecretUpdated = 'project.jwt_secret_updated',
+  ProjectJwtSecretUpdateStatusChange = 'project.jwt_secret_update_status_change',
 
   PostgresqlRestart = 'postgresql.restart',
+}
+
+export enum JwtSecretUpdateStatus {
+  Updating,
+  Updated,
+  Failed,
+}
+
+export enum JwtSecretUpdateProgress {
+  Started,
+  RestartedPostgreSQL,
+  UpdatedAPIServicesConfiguration,
+  RestartedAPIServices,
+  UpdatedDatabaseAdminAPIConfiguration,
+}
+
+export enum JwtSecretUpdateError {
+  PostgreSQLRestartFailed,
+  APIServicesConfigurationUpdateFailed,
+  APIServicesRestartFailed,
+  DatabaseAdminAPIConfigurationUpdateFailed,
+  SupabaseAPIKeyUpdateFailed,
 }
 
 export interface RestartServicePayload {
