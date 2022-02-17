@@ -32,6 +32,7 @@ export enum JwtSecretUpdateError {
   DatabaseAdminAPIConfigurationUpdateFailed,
   SupabaseAPIKeyUpdateFailed,
 }
+
 export interface RestartServicePayload {
   project_id: number
   service_names: ServiceNames[]
