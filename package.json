@@ -1,6 +1,6 @@
 {
   "name": "@supabase/shared-types",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Shared Types for Supabase",
   "scripts": {},
   "author": "Supabase",
