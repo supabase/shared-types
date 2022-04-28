@@ -23,6 +23,7 @@ export enum JwtSecretUpdateProgress {
   UpdatedAPIServicesConfiguration,
   RestartedAPIServices,
   UpdatedDatabaseAdminAPIConfiguration,
+  UpdatedAPIGatewayConfiguration,
 }
 
 export enum JwtSecretUpdateError {
@@ -31,6 +32,7 @@ export enum JwtSecretUpdateError {
   APIServicesRestartFailed,
   DatabaseAdminAPIConfigurationUpdateFailed,
   SupabaseAPIKeyUpdateFailed,
+  APIGatewayUpdateFailed,
 }
 
 export interface RestartServicePayload {
