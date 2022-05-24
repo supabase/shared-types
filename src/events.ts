@@ -7,6 +7,7 @@ export enum ProjectEvents {
   ProjectPendingShutdown = 'project.pending_shutdown_notification',
   ProjectShutdownEligible = 'project.shutdown_eligible',
   ProjectJwtSecretUpdateStatusChange = 'project.jwt_secret_update_status_change',
+  ProjectServiceConfigUpdate = 'project.service_config_update',
 
   PostgresqlRestart = 'postgresql.restart',
 }
@@ -55,4 +56,9 @@ export interface CreateNotificationPayload {
   notification_name: NotificationName
   data: object
   meta: object
+}
+
+export interface ServiceConfigUpdate {
+  services: ServiceNames[]
+  data: object
 }
