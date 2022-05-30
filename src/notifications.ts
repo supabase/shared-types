@@ -1,8 +1,18 @@
+import { ServiceNames } from 'constants'
+
 export enum NotificationName {
   ProjectExceedingTierLimit = 'project.tier-limit-exceeded',
-  PostgresqlBugfix = 'postgresql.bugfix',
 
-  PostgresqlInformational = 'postgresql.informational',
+  // postgresql + extensions + related services (e.g. wal2json)
+  PostgresqlUpgradeAvailable = 'postgresql.upgrade-available',
+  PostgresqlUpgradeCompleted = 'postgresql.upgrade-completed',
+
+  // non-postgresql services (e.g. realtime or gotrue)
+  // ProjectUpdateAvailable = 'project.update-available',
+  ProjectUpdateCompleted = 'project.update-completed',
+
+  // PostgresqlInformational = 'postgresql.informational',
+  // ProjectInformational = 'project.informational',
 }
 
 export enum NotificationStatus {
@@ -10,11 +20,36 @@ export enum NotificationStatus {
   Seen = 'seen',
 }
 
-export enum Actions {
-  UpgradeProjectToPro = 'project.upgrade-pro',
-  UpgradeProjectToPayg = 'project.upgrade-payg',
+export enum ActionType {
+  UpgradeProjectToPro = 'project.upgrade',
   SchedulePostgresRestart = 'postgresql.restart',
 }
+
+export interface Action {
+  action_type: ActionType
+  reason?: string
+  deadline?: Date
+}
+
+export interface SharedMeta {
+  actions_available: Action[]
+}
+
+export interface Notification {
+  id: string
+  project_id: number
+  inserted_at: Date
+  notification_name: NotificationName
+  notification_status: NotificationStatus
+  data: ProjectExceedingTierLimitData | PostgresqlUpgradeData | ProjectUpdateData
+  meta: SharedMeta
+}
+
+// ########################################
+// notification type specific data objects
+// ########################################
+
+// Tier Violations
 
 export enum ViolationType {
   Storage = 'Storage',
@@ -28,25 +63,39 @@ export interface ViolatedLimit {
   current_value: number
 }
 
-export interface ProjectExceedingTierLimit {
+export type ProjectExceedingTierLimitData = {
+  name: NotificationName.ProjectExceedingTierLimit
   violations: ViolatedLimit[]
 }
 
-export interface PostgresRestartRequired {
-  reason: string
-  forceRestartBy?: Date
+// PG Upgrades
+
+export interface ExtensionsUpgrade {
+  name: string
+  version_to: string
 }
 
-export interface SharedMeta {
-  actions: Actions[]
+export interface ServerUpgrade {
+  version_to: string
 }
 
-export interface Notification {
-  id: string
-  project_id: number
-  inserted_at: Date
-  notification_name: NotificationName
-  notification_status: NotificationStatus
-  data: any
-  meta: any
+// TODO (darora): config upgrades would also be included here, but we
+// need to create a config versioning and tracking scheme first
+export type PostgresqlUpgradeData = {
+  name: NotificationName.PostgresqlUpgradeAvailable | NotificationName.PostgresqlUpgradeCompleted
+  upgrade_type: 'postgresql-server' | 'extensions'
+  additional: ServerUpgrade | ExtensionsUpgrade
+}
+
+// ProjectUpdateCompleted
+
+export interface ServiceUpgrade {
+  name: ServiceNames
+  version_to: string
+  changelog_link?: string
+}
+
+export type ProjectUpdateData = {
+  name: NotificationName.ProjectUpdateCompleted
+  upgrades: ServiceUpgrade[]
 }
