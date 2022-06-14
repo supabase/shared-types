@@ -11,8 +11,10 @@ export enum NotificationName {
   // ProjectUpdateAvailable = 'project.update-available',
   ProjectUpdateCompleted = 'project.update-completed',
 
+  // the freeform informational notifications are to be used sparingly, as they don't
+  // really provide for e.g. i18n in any meaningful way
   // PostgresqlInformational = 'postgresql.informational',
-  // ProjectInformational = 'project.informational',
+  ProjectInformational = 'project.informational',
 }
 
 export enum NotificationStatus {
@@ -23,6 +25,7 @@ export enum NotificationStatus {
 export enum ActionType {
   UpgradeProjectToPro = 'project.upgrade',
   SchedulePostgresRestart = 'postgresql.restart',
+  PgBouncerRestart = 'pgbouncer.restart',
 }
 
 export interface Action {
@@ -98,4 +101,11 @@ export interface ServiceUpgrade {
 export type ProjectUpdateData = {
   name: NotificationName.ProjectUpdateCompleted
   upgrades: ServiceUpgrade[]
+}
+
+// informational
+
+export type ProjectInformationalData = {
+  name: NotificationName.ProjectInformational
+  message: string
 }
