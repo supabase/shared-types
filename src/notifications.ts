@@ -44,7 +44,11 @@ export interface Notification {
   inserted_at: Date
   notification_name: NotificationName
   notification_status: NotificationStatus
-  data: ProjectExceedingTierLimitData | PostgresqlUpgradeData | ProjectUpdateData
+  data:
+    | ProjectExceedingTierLimitData
+    | PostgresqlUpgradeData
+    | ProjectUpdateData
+    | ProjectInformationalData
   meta: SharedMeta
 }
 
