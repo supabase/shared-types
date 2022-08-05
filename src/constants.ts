@@ -18,9 +18,12 @@ export enum PermissionAction {
   AUTH_EXECUTE = 'auth:Execute',
   BILLING_READ = 'billing:Read',
   BILLING_WRITE = 'billing:Write',
+  CREATE = 'write:Create',
+  DELETE = 'write:Delete',
   FUNCTIONS_READ = 'functions:Read',
   FUNCTIONS_WRITE = 'functions:Write',
   INFRA_EXECUTE = 'infra:Execute',
+  READ = 'read:Read',
   SQL_SELECT = 'sql:Read:Select',
   SQL_DELETE = 'sql:Write:Delete',
   SQL_INSERT = 'sql:Write:Insert',
@@ -35,4 +38,5 @@ export enum PermissionAction {
   TENANT_SQL_QUERY = 'tenant:Sql:Query',
   TENANT_SQL_SELECT = 'tenant:Sql:Read:Select',
   TENANT_SQL_UPDATE = 'tenant:Sql:Write:Update',
+  UPDATE = 'write:Update',
 }
