@@ -5,6 +5,7 @@ export enum ServiceNames {
   Gotrue = 'gotrue',
   Kong = 'kong',
   Pgbouncer = 'pgbouncer',
+  Pgsodium = 'pgsodium',
   Postgresql = 'postgresql',
   Postgrest = 'postgrest',
   Realtime = 'realtime',
