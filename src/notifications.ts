@@ -91,7 +91,7 @@ export interface ServerUpgrade {
 // need to create a config versioning and tracking scheme first
 export type PostgresqlUpgradeData = {
   name: NotificationName.PostgresqlUpgradeAvailable | NotificationName.PostgresqlUpgradeCompleted
-  upgrade_type: 'postgresql-server' | 'extensions' | 'migration'
+  upgrade_type: 'postgresql-server' | 'extensions' | 'schema-migration'
   additional: ServerUpgrade | ExtensionsUpgrade
 }
 
