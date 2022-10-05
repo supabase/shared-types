@@ -29,9 +29,15 @@ export enum ActionType {
   PgBouncerRestart = 'pgbouncer.restart',
 }
 
+export enum ActionReason {
+  Apply = 'apply',
+  Rollback = 'rollback',
+  Finalize = 'finalize',
+}
+
 export interface Action {
   action_type: ActionType
-  reason?: string
+  reason?: string | ActionReason
   deadline?: Date
 }
 
@@ -93,6 +99,7 @@ export type PostgresqlUpgradeData = {
   name: NotificationName.PostgresqlUpgradeAvailable | NotificationName.PostgresqlUpgradeCompleted
   upgrade_type: 'postgresql-server' | 'extensions' | 'schema-migration'
   additional: ServerUpgrade | ExtensionsUpgrade
+  changelog_link?: string
 }
 
 // ProjectUpdateCompleted
