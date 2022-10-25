@@ -10,6 +10,8 @@ export enum ProjectEvents {
   ProjectShutdownEligible = 'project.shutdown_eligible',
   ProjectJwtSecretUpdateStatusChange = 'project.jwt_secret_update_status_change',
   ProjectServiceConfigUpdate = 'project.service_config_update',
+  ProjectSansKpsMigrationInitiated = 'project.sans_kps_migration_initiated',
+  ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
 
   PostgresqlRestart = 'postgresql.restart',
 }
