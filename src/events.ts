@@ -1,6 +1,5 @@
 import { NotificationName } from './notifications'
 import { ServiceNames } from './constants'
-import { projects } from 'index'
 
 export enum ProjectEvents {
   ProjectPaused = 'project.paused',
