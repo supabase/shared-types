@@ -6,6 +6,7 @@ export enum ProjectEvents {
   ProjectRestored = 'project.restored',
   ProjectRestoredFromLogicalBackup = 'project.restored_from_logical_backup',
   ProjectRestoredFromPitr = 'project.restored_from_pitr',
+  ProjectFailedRestorationFromPitr = 'project.failed_restoration_from_pitr',
   ProjectPendingShutdown = 'project.pending_shutdown_notification',
   ProjectShutdownEligible = 'project.shutdown_eligible',
   ProjectJwtSecretUpdateStatusChange = 'project.jwt_secret_update_status_change',
