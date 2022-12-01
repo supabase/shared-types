@@ -15,6 +15,7 @@ export enum ProjectEvents {
   ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
   ProjectDatabaseUpgradeInitiated = 'project.database_upgrade_initiated',
   ProjectDatabaseUpgradeCompleted = 'project.database_upgrade_completed',
+  ProjectDatabaseUpgradeFailed = 'project.database_upgrade_failed',
 
   PostgresqlRestart = 'postgresql.restart',
 }
