@@ -13,9 +13,7 @@ export enum ProjectEvents {
   ProjectServiceConfigUpdate = 'project.service_config_update',
   ProjectSansKpsMigrationInitiated = 'project.sans_kps_migration_initiated',
   ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
-  ProjectDatabaseUpgradeInitiated = 'project.database_upgrade_initiated',
-  ProjectDatabaseUpgradeCompleted = 'project.database_upgrade_completed',
-  ProjectDatabaseUpgradeFailed = 'project.database_upgrade_failed',
+  ProjectDatabaseUpgradeStatusChange = 'project.database_upgrade_status_change',
 
   PostgresqlRestart = 'postgresql.restart',
 }
@@ -42,6 +40,35 @@ export enum JwtSecretUpdateError {
   DatabaseAdminAPIConfigurationUpdateFailed,
   SupabaseAPIKeyUpdateFailed,
   APIGatewayUpdateFailed,
+}
+
+export enum DatabaseUpgradeStatus {
+  Upgrading,
+  Upgraded,
+  Failed,
+}
+
+export enum DatabaseUpgradeProgress {
+  Started,
+  LaunchedUpgradedInstance,
+  DetachedVolumeFromUpgradedInstance,
+  AttachedVolumeToOriginalInstance,
+  InitiatedDataUpgrade,
+  CompletedDataUpgrade,
+  DetachedVolumeFromOriginalInstance,
+  AttachedVolumeToUpgradedInstance,
+  CompletedUpgrade,
+}
+
+export enum DatabaseUpgradeError {
+  UpgradedInstanceLaunchFailed,
+  VolumeDetachchmentFromUpgradedInstanceFailed,
+  VolumeAttachmentToOriginalInstanceFailed,
+  DataUpgradeInitiationFailed,
+  DataUpgradeCompletionFailed,
+  VolumeDetachchmentFromOriginalInstanceFailed,
+  VolumeAttachmentToUpgradedInstanceFailed,
+  UpgradeCompletionFailed,
 }
 
 export interface RestartServicePayload {
