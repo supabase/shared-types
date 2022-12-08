@@ -13,9 +13,7 @@ export enum ProjectEvents {
   ProjectServiceConfigUpdate = 'project.service_config_update',
   ProjectSansKpsMigrationInitiated = 'project.sans_kps_migration_initiated',
   ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
-  ProjectDatabaseUpgradeInitiated = 'project.database_upgrade_initiated',
-  ProjectDatabaseUpgradeCompleted = 'project.database_upgrade_completed',
-  ProjectDatabaseUpgradeFailed = 'project.database_upgrade_failed',
+  ProjectDatabaseUpgradeStatusChange = 'project.database_upgrade_status_change',
 
   PostgresqlRestart = 'postgresql.restart',
 }
@@ -42,6 +40,35 @@ export enum JwtSecretUpdateError {
   DatabaseAdminAPIConfigurationUpdateFailed,
   SupabaseAPIKeyUpdateFailed,
   APIGatewayUpdateFailed,
+}
+
+export enum DatabaseUpgradeStatus {
+  Upgrading,
+  Upgraded,
+  Failed,
+}
+
+export enum DatabaseUpgradeProgress {
+  Started = '1_started',
+  LaunchedUpgradedInstance = '2_launched_upgraded_instance',
+  DetachedVolumeFromUpgradedInstance = '3_detached_volume_from_upgraded_instance',
+  AttachedVolumeToOriginalInstance = '4_attached_volume_to_original_instance',
+  InitiatedDataUpgrade = '5_initiated_data_upgrade',
+  CompletedDataUpgrade = '6_completed_data_upgrade',
+  DetachedVolumeFromOriginalInstance = '7_detached_volume_from_original_instance',
+  AttachedVolumeToUpgradedInstance = '8_attached_volume_to_upgraded_instance',
+  CompletedUpgrade = '9_completed_upgrade',
+}
+
+export enum DatabaseUpgradeError {
+  UpgradedInstanceLaunchFailed = '1_upgraded_instance_launch_failed',
+  VolumeDetachchmentFromUpgradedInstanceFailed = '2_volume_detachchment_from_upgraded_instance_failed',
+  VolumeAttachmentToOriginalInstanceFailed = '3_volume_attachment_to_original_instance_failed',
+  DataUpgradeInitiationFailed = '4_data_upgrade_initiation_failed',
+  DataUpgradeCompletionFailed = '5_data_upgrade_completion_failed',
+  VolumeDetachchmentFromOriginalInstanceFailed = '6_volume_detachchment_from_original_instance_failed',
+  VolumeAttachmentToUpgradedInstanceFailed = '7_volume_attachment_to_upgraded_instance_failed',
+  UpgradeCompletionFailed = '8_upgrade_completion_failed',
 }
 
 export interface RestartServicePayload {
