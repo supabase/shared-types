@@ -15,6 +15,8 @@ export enum ProjectEvents {
   ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
   ProjectDatabaseUpgradeStatusChange = 'project.database_upgrade_status_change',
 
+  ProjectSubscriptionUpdated = 'project.subscription_updated',
+
   PostgresqlRestart = 'postgresql.restart',
 }
 
@@ -96,4 +98,11 @@ export interface CreateNotificationPayload {
 export interface ServiceConfigUpdate {
   services: ServiceNames[]
   data: object
+}
+
+export interface SubscriptionUpdatePayload {
+  oldTier: string
+  updatedTier: string
+  oldProductIds: string[]
+  updatedProductIds: string[]
 }
