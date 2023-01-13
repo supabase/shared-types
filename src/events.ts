@@ -120,6 +120,7 @@ export interface InfraResizedPayload {
 export interface InfraDeletedPayload {
   instanceClass: string
   type: InfraUpdateType.Deleted
+  removal_type: 'paused' | 'removed'
 }
 
 export type InfraUpdatePayload = InfraCreatedPayload | InfraResizedPayload | InfraDeletedPayload
