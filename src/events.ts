@@ -15,9 +15,15 @@ export enum ProjectEvents {
   ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
   ProjectDatabaseUpgradeStatusChange = 'project.database_upgrade_status_change',
 
-  ProjectSubscriptionUpdated = 'project.subscription_updated',
+  ProjectInfrastructureUpdated = 'project.infra_updated',
 
   PostgresqlRestart = 'postgresql.restart',
+}
+
+export enum InfraUpdateType {
+  Created = 'created',
+  Resized = 'resized',
+  Deleted = 'deleted',
 }
 
 export enum JwtSecretUpdateStatus {
@@ -100,9 +106,20 @@ export interface ServiceConfigUpdate {
   data: object
 }
 
-export interface SubscriptionUpdatePayload {
-  oldTier: string
-  updatedTier: string
-  oldProductIds: string[]
-  updatedProductIds: string[]
+export interface InfraCreatedPayload {
+  instanceClass: string
+  type: InfraUpdateType.Created
 }
+
+export interface InfraResizedPayload {
+  oldInstanceClass: string
+  newInstanceClass: string
+  type: InfraUpdateType.Resized
+}
+
+export interface InfraDeletedPayload {
+  instanceClass: string
+  type: InfraUpdateType.Deleted
+}
+
+export type InfraUpdatePayload = InfraCreatedPayload | InfraResizedPayload | InfraDeletedPayload
