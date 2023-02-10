@@ -45,9 +45,9 @@ export enum PermissionAction {
 export enum SupportCategories {
   PROBLEM = 'problem',
   DASHBOARD_BUG = 'dashboard_bug',
-  DATABASE_UNRESPONSIVE = 'database_unresponsive'
-  PERFORMANCE_ISSUES = 'performance'
-  SALES_ENQUIRY = 'sales'
-  BILLING = 'billing'
-  REFUND = 'refund'
+  DATABASE_UNRESPONSIVE = 'database_unresponsive',
+  PERFORMANCE_ISSUES = 'performance',
+  SALES_ENQUIRY = 'sales',
+  BILLING = 'billing',
+  REFUND = 'refund',
 }
