@@ -43,11 +43,11 @@ export enum PermissionAction {
 }
 
 export enum SupportCategories {
-  PROBLEM = 'problem',
-  DASHBOARD_BUG = 'dashboard_bug',
-  DATABASE_UNRESPONSIVE = 'database_unresponsive',
-  PERFORMANCE_ISSUES = 'performance',
-  SALES_ENQUIRY = 'sales',
-  BILLING = 'billing',
-  REFUND = 'refund',
+  PROBLEM = 'Problem',
+  DASHBOARD_BUG = 'Dashboard_bug',
+  DATABASE_UNRESPONSIVE = 'Database_unresponsive',
+  PERFORMANCE_ISSUES = 'Performance',
+  SALES_ENQUIRY = 'Sales',
+  BILLING = 'Billing',
+  REFUND = 'Refund',
 }
