@@ -41,3 +41,13 @@ export enum PermissionAction {
   TENANT_SQL_UPDATE = 'tenant:Sql:Write:Update',
   UPDATE = 'write:Update',
 }
+
+export enum SupportCategories {
+  PROBLEM = 'Problem',
+  DASHBOARD_BUG = 'Dashboard_bug',
+  DATABASE_UNRESPONSIVE = 'Database_unresponsive',
+  PERFORMANCE_ISSUES = 'Performance',
+  SALES_ENQUIRY = 'Sales',
+  BILLING = 'Billing',
+  REFUND = 'Refund',
+}
