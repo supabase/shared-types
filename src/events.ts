@@ -14,16 +14,21 @@ export enum ProjectEvents {
   ProjectSansKpsMigrationInitiated = 'project.sans_kps_migration_initiated',
   ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
   ProjectDatabaseUpgradeStatusChange = 'project.database_upgrade_status_change',
-
   ProjectInfrastructureUpdated = 'project.infra_updated',
-
   PostgresqlRestart = 'postgresql.restart',
+  ProjectWalgUpdated = 'project.walg_updated',
 }
 
 export enum InfraUpdateType {
   Created = 'created',
   Resized = 'resized',
   Deleted = 'deleted',
+}
+
+export enum WalgUpdateType {
+  Enabled = 'enabled',
+  Changed = 'changed',
+  Disabled = 'disabled',
 }
 
 export enum JwtSecretUpdateStatus {
@@ -124,3 +129,17 @@ export interface InfraDeletedPayload {
 }
 
 export type InfraUpdatePayload = InfraCreatedPayload | InfraResizedPayload | InfraDeletedPayload
+
+export type WalgEnabledPayload = {
+  type: WalgUpdateType.Enabled
+  backup_period: number
+}
+
+export type WalgChangedPayload = {
+  type: WalgUpdateType.Changed
+  backup_period: number
+}
+
+export type WalgDisabledPayload = {
+  type: WalgUpdateType.Disabled
+}
