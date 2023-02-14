@@ -132,12 +132,12 @@ export type InfraUpdatePayload = InfraCreatedPayload | InfraResizedPayload | Inf
 
 export type WalgEnabledPayload = {
   type: WalgUpdateType.Enabled
-  backup_period: number
+  backup_period_days: number
 }
 
 export type WalgChangedPayload = {
   type: WalgUpdateType.Changed
-  backup_period: number
+  backup_period_days: number
 }
 
 export type WalgDisabledPayload = {
