@@ -143,3 +143,5 @@ export type WalgChangedPayload = {
 export type WalgDisabledPayload = {
   type: WalgUpdateType.Disabled
 }
+
+export type WalgUpdatePayload = WalgEnabledPayload | WalgChangedPayload | WalgDisabledPayload
