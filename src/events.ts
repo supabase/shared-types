@@ -162,4 +162,6 @@ export type DiskGrowthPayload = {
 export type SubscriptionUpdatePayload = {
   old_tier: string
   new_tier: string
+  original_product_ids: string[]
+  updated_product_ids: string[]
 }
