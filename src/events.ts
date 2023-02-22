@@ -17,6 +17,13 @@ export enum ProjectEvents {
   ProjectInfrastructureUpdated = 'project.infra_updated',
   PostgresqlRestart = 'postgresql.restart',
   ProjectWalgUpdated = 'project.walg_updated',
+  ProjectSubscriptionUpdated = 'project.subscription_updated',
+  ProjectDiskGrowth = 'project.disk_growth',
+}
+
+export enum ProjectDiskGrowth {
+  DiskExpand = 'disk_expand',
+  FilesystemGrow = 'fs_grow',
 }
 
 export enum InfraUpdateType {
@@ -145,3 +152,14 @@ export type WalgDisabledPayload = {
 }
 
 export type WalgUpdatePayload = WalgEnabledPayload | WalgChangedPayload | WalgDisabledPayload
+
+export type DiskGrowthPayload = {
+  new_disk_size_gb?: number
+  old_disk_size_gb?: number
+  type: ProjectDiskGrowth
+}
+
+export type SubscriptionUpdatePayload = {
+  old_tier: string
+  new_tier: string
+}
