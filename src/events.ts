@@ -19,6 +19,7 @@ export enum ProjectEvents {
   ProjectWalgUpdated = 'project.walg_updated',
   ProjectSubscriptionUpdated = 'project.subscription_updated',
   ProjectDiskGrowth = 'project.disk_growth',
+  ProjectSoftwareUpgraded = 'project.software_upgraded',
 }
 
 export enum ProjectDiskGrowth {
@@ -164,4 +165,15 @@ export type SubscriptionUpdatePayload = {
   new_tier: string
   original_product_ids: string[]
   updated_product_ids: string[]
+}
+
+export enum SoftwareUpgradeStatus {
+  Updating = 'updating',
+  Updated = 'updated',
+  Failed = 'failed',
+}
+
+export type SoftwareUpgradePayload = {
+  service_name: string
+  version: string
 }
