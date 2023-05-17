@@ -10,6 +10,7 @@ export enum ServiceNames {
   Postgrest = 'postgrest',
   Realtime = 'realtime',
   Storage = 'storage',
+  Walg = 'walg',
 }
 
 export const DEFAULT_REALTIME_SLOT_NAME_WITH_WALRUS = 'realtime_rls'
