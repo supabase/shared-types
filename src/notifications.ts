@@ -125,5 +125,5 @@ export type LinkedButton = {
 export type ProjectInformationalData = {
   name: NotificationName.ProjectInformational
   message: string
-  linked_buttons: LinkedButton[]
+  linked_buttons?: LinkedButton[]
 }
