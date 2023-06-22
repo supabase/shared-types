@@ -20,6 +20,7 @@ export enum ProjectEvents {
   ProjectSubscriptionUpdated = 'project.subscription_updated',
   ProjectDiskGrowth = 'project.disk_growth',
   ProjectSoftwareUpgraded = 'project.software_upgraded',
+  ProjectTransfered = 'project.transfered',
 }
 
 export enum ProjectDiskGrowth {
@@ -176,4 +177,9 @@ export enum SoftwareUpgradeStatus {
 export type SoftwareUpgradePayload = {
   service_name: string
   version: string
+}
+
+export type ProjectTransferedPayload = {
+  old_organization_id: number
+  new_organization_id: number
 }
