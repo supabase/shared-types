@@ -52,4 +52,5 @@ export enum SupportCategories {
   SALES_ENQUIRY = 'Sales',
   BILLING = 'Billing',
   REFUND = 'Refund',
+  ABUSE = 'Abuse',
 }
