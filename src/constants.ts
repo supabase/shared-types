@@ -53,4 +53,5 @@ export enum SupportCategories {
   BILLING = 'Billing',
   REFUND = 'Refund',
   ABUSE = 'Abuse',
+  LOGIN_ISSUES = 'Login_issues',
 }
