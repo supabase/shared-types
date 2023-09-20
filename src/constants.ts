@@ -50,4 +50,5 @@ export enum SupportCategories {
   SALES_ENQUIRY = 'Sales',
   BILLING = 'Billing',
   REFUND = 'Refund',
+  ACCOUNT_DELETION = 'Account_deletion',
 }
