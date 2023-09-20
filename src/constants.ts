@@ -97,4 +97,5 @@ export enum SupportCategories {
   REFUND = 'Refund',
   ABUSE = 'Abuse',
   LOGIN_ISSUES = 'Login_issues',
+  ACCOUNT_DELETION = 'Account_deletion',
 }
