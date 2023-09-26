@@ -28,10 +28,10 @@ export interface ProjectInitializationBasePayload {
   anon_key_encrypted: string
   api_id: string
   initialization_type: InitializationType
-  kps_enabled: boolean
   payload_version: InitializationPayloadVersion
   project_id: number
   service_key_encrypted: string
+  database_id: number
 }
 
 export interface NewProjectInitializationPayload extends ProjectInitializationBasePayload {
