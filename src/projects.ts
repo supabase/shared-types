@@ -17,6 +17,7 @@ export interface UpdateSupabaseApiKeyPayload {
 
 export enum InitializationPayloadVersion {
   Version1 = 1,
+  Version2 = 2,
 }
 
 export enum InitializationType {
