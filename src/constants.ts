@@ -1,6 +1,7 @@
 export enum ServiceNames {
   AdminApi = 'adminapi',
   ApiGateway = 'api-gateway',
+  Envoy = 'envoy',
   Functions = 'functions',
   Gotrue = 'gotrue',
   Kong = 'kong',
