@@ -64,6 +64,8 @@ export enum OAuthScope {
   REST_WRITE = 'rest:write',
   SECRETS_READ = 'secrets:read',
   SECRETS_WRITE = 'secrets:write',
+  STORAGE_READ = 'storage:read',
+  STORAGE_WRITE = 'storage:write',
 }
 
 export enum SupportCategories {
