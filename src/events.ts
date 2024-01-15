@@ -72,6 +72,7 @@ export enum DatabaseUpgradeStatus {
 }
 
 export enum DatabaseUpgradeProgress {
+  Requested = '0_requested',
   Started = '1_started',
   LaunchedUpgradedInstance = '2_launched_upgraded_instance',
   DetachedVolumeFromUpgradedInstance = '3_detached_volume_from_upgraded_instance',
