@@ -13,8 +13,10 @@ export enum ProjectEvents {
   ProjectServiceConfigUpdate = 'project.service_config_update',
   ProjectSansKpsMigrationInitiated = 'project.sans_kps_migration_initiated',
   ProjectSansKpsMigrationCompleted = 'project.sans_kps_migration_completed',
+  ProjectConfigUpdated = 'project.config_updated',
   ProjectDatabaseUpgradeStatusChange = 'project.database_upgrade_status_change',
   ProjectInfrastructureUpdated = 'project.infra_updated',
+  ProjectInfrastructureRestarted = 'project.infra_restarted',
   PostgresqlRestart = 'postgresql.restart',
   ProjectWalgUpdated = 'project.walg_updated',
   ProjectSubscriptionUpdated = 'project.subscription_updated',
@@ -104,6 +106,7 @@ export interface UpdateConfigPayload {
   project_id: number
   service_names: ServiceNames[]
   restart_services: boolean
+  database_id?: number
 }
 
 export interface DismissNotificationsPayload {
