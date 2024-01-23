@@ -25,6 +25,20 @@ export enum InitializationType {
   Restore = 'restore',
 }
 
+export enum ProjectDbInstanceSize {
+  NANO = 'nano',
+  MICRO = 'micro',
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  LARGE = 'large',
+  XLARGE = 'xlarge',
+  XLARGE_2 = '2xlarge',
+  XLARGE_4 = '4xlarge',
+  XLARGE_8 = '8xlarge',
+  XLARGE_12 = '12xlarge',
+  XLARGE_16 = '16xlarge',
+}
+
 export interface ProjectInitializationBasePayload {
   anon_key_encrypted: string
   api_id: string
@@ -33,6 +47,7 @@ export interface ProjectInitializationBasePayload {
   project_id: number
   service_key_encrypted: string
   database_id: number
+  desired_instance_size?: ProjectDbInstanceSize
 }
 
 export interface NewProjectInitializationPayload extends ProjectInitializationBasePayload {
