@@ -1,6 +1,6 @@
 {
   "name": "@supabase/shared-types",
-  "version": "0.1.60",
+  "version": "0.1.61",
   "description": "Shared Types for Supabase",
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx",

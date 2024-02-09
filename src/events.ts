@@ -26,6 +26,7 @@ export enum ProjectEvents {
   ProjectTransfered = 'project.transfered',
   ProjectPhysicalBackupTransition = 'project.physical_backup_transition',
   ProjectIPv4AddressUpdate = 'project.network.ipv4_update',
+  ProjectAddonUpdated = 'project.addon_updated',
 }
 
 export enum ProjectDiskGrowth {
@@ -189,4 +190,10 @@ export type SoftwareUpgradePayload = {
 export type ProjectTransferedPayload = {
   old_organization_id: number
   new_organization_id: number
+}
+
+export type ProjectAddonUpdatedPayload = {
+  addon_type: string
+  old_addon_variant?: string
+  new_addon_variant?: string
 }
