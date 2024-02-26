@@ -15,50 +15,6 @@ export interface UpdateSupabaseApiKeyPayload {
   next_api_key_supabase_encrypted: string
 }
 
-export enum InitializationPayloadVersion {
-  Version1 = 1,
-  Version2 = 2,
-}
-
-export enum InitializationType {
-  NewProject = 'new_project',
-  Restore = 'restore',
-}
-
-export enum ProjectDbInstanceSize {
-  NANO = 'nano',
-  MICRO = 'micro',
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large',
-  XLARGE = 'xlarge',
-  XLARGE_2 = '2xlarge',
-  XLARGE_4 = '4xlarge',
-  XLARGE_8 = '8xlarge',
-  XLARGE_12 = '12xlarge',
-  XLARGE_16 = '16xlarge',
-}
-
-export interface ProjectInitializationBasePayload {
-  anon_key_encrypted: string
-  api_id: string
-  initialization_type: InitializationType
-  payload_version: InitializationPayloadVersion
-  project_id: number
-  service_key_encrypted: string
-  database_id: number
-  desired_instance_size?: ProjectDbInstanceSize
-}
-
-export interface NewProjectInitializationPayload extends ProjectInitializationBasePayload {
-  auth_site_url: string
-  db_sql: string
-}
-
-export interface RestoreProjectPayload extends ProjectInitializationBasePayload {
-  backup_id: number
-}
-
 export enum BackupSchedulePayloadType {
   Create = 'create',
   Update = 'update',
