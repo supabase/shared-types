@@ -15,6 +15,9 @@ export enum NotificationName {
   // really provide for e.g. i18n in any meaningful way
   // PostgresqlInformational = 'postgresql.informational',
   ProjectInformational = 'project.informational',
+
+  // Attempt to resize project to a different compute size failed
+  ProjectResizeFailed = 'project.resize-failed',
 }
 
 export enum NotificationStatus {
@@ -56,6 +59,7 @@ export interface Notification {
     | PostgresqlUpgradeData
     | ProjectUpdateData
     | ProjectInformationalData
+    | ProjectResizeFailedData
   meta: SharedMeta
 }
 
@@ -124,6 +128,12 @@ export type LinkedButton = {
 
 export type ProjectInformationalData = {
   name: NotificationName.ProjectInformational
+  message: string
+  linked_buttons?: LinkedButton[]
+}
+
+export type ProjectResizeFailedData = {
+  name: NotificationName.ProjectResizeFailed
   message: string
   linked_buttons?: LinkedButton[]
 }
