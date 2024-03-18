@@ -28,6 +28,7 @@ export enum ProjectEvents {
   ProjectPhysicalBackupTransition = 'project.physical_backup_transition',
   ProjectIPv4AddressUpdate = 'project.network.ipv4_update',
   ProjectAddonUpdated = 'project.addon_updated',
+  ProjectServiceLifecycleChange = 'project.service_lifecycle_change',
 }
 
 export enum ProjectDiskGrowth {
