@@ -29,6 +29,7 @@ export enum ProjectEvents {
   ProjectIPv4AddressUpdate = 'project.network.ipv4_update',
   ProjectAddonUpdated = 'project.addon_updated',
   ProjectServiceLifecycleChange = 'project.service_lifecycle_change',
+  ProjectReadReplicaSetupStatusChange = 'project.read_replica_setup_status_change',
 }
 
 export enum ProjectDiskGrowth {
@@ -118,7 +119,7 @@ export enum ReadReplicaSetupProgress {
   CompletedReadReplicaSetup = '6_completed_read_replica_setup',
 }
 
-export enum DatabaseUpgradeError {
+export enum ReadReplicaSetupError {
   ReadReplicaInstanceLaunchFailed = '1_read_replica_instance_launch_failed',
   InitiateReadReplicaSetupFailed = '2_initiate_read_replica_setup_failed',
   DownloadBaseBackupFailed = '3_download_base_backup_failed',
