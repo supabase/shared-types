@@ -102,6 +102,30 @@ export enum DatabaseUpgradeError {
   UpgradeCompletionFailed = '8_upgrade_completion_failed',
 }
 
+export enum ReadReplicaSetupStatus {
+  SettingUp,
+  Completed,
+  Failed,
+}
+
+export enum ReadReplicaSetupProgress {
+  Requested = '0_requested',
+  Started = '1_started',
+  LaunchedReadReplicaInstance = '2_launched_read_replica_instance',
+  InitiatedReadReplicaSetup = '3_initiated_read_replica_setup',
+  DownloadedBaseBackup = '4_downloaded_base_backup',
+  ReplayedWalArchives = '5_replayed_wal_archives',
+  CompletedReadReplicaSetup = '6_completed_read_replica_setup',
+}
+
+export enum DatabaseUpgradeError {
+  ReadReplicaInstanceLaunchFailed = '1_read_replica_instance_launch_failed',
+  InitiateReadReplicaSetupFailed = '2_initiate_read_replica_setup_failed',
+  DownloadBaseBackupFailed = '3_download_base_backup_failed',
+  ReplayWalArchivesFailed = '4_replay_wal_archives_failed',
+  CompleteReadReplicaSetupFailed = '5_complete_read_replica_setup_failed',
+}
+
 export interface RestartServicePayload {
   project_id: number
   service_names: ServiceNames[]
