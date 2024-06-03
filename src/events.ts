@@ -30,6 +30,7 @@ export enum ProjectEvents {
   ProjectAddonUpdated = 'project.addon_updated',
   ProjectServiceLifecycleChange = 'project.service_lifecycle_change',
   ProjectReadReplicaSetupStatusChange = 'project.read_replica_setup_status_change',
+  ProjectVolumeAttributeModification = 'project.volume_modification',
 }
 
 export enum ProjectDiskGrowth {
