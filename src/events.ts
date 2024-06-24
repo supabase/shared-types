@@ -91,6 +91,7 @@ export enum DatabaseUpgradeProgress {
   DetachedVolumeFromOriginalInstance = '7_detached_volume_from_original_instance',
   AttachedVolumeToUpgradedInstance = '8_attached_volume_to_upgraded_instance',
   CompletedUpgrade = '9_completed_upgrade',
+  CompletedPostPhysicalBackup = '10_completed_post_physical_backup',
 }
 
 export enum DatabaseUpgradeError {
@@ -102,6 +103,7 @@ export enum DatabaseUpgradeError {
   VolumeDetachchmentFromOriginalInstanceFailed = '6_volume_detachchment_from_original_instance_failed',
   VolumeAttachmentToUpgradedInstanceFailed = '7_volume_attachment_to_upgraded_instance_failed',
   UpgradeCompletionFailed = '8_upgrade_completion_failed',
+  PostPhysicalBackupFailed = '9_post_physical_backup_failed',
 }
 
 export enum ReadReplicaSetupStatus {
@@ -126,6 +128,13 @@ export enum ReadReplicaSetupError {
   DownloadBaseBackupFailed = '3_download_base_backup_failed',
   ReplayWalArchivesFailed = '4_replay_wal_archives_failed',
   CompleteReadReplicaSetupFailed = '5_complete_read_replica_setup_failed',
+}
+
+export enum SslEnforcementApplicationStatus {
+  Enforcing,
+  Disabling,
+  Completed,
+  Failed,
 }
 
 export interface RestartServicePayload {
