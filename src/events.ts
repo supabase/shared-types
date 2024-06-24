@@ -130,14 +130,6 @@ export enum ReadReplicaSetupError {
   ReplayWalArchivesFailed = '4_replay_wal_archives_failed',
   CompleteReadReplicaSetupFailed = '5_complete_read_replica_setup_failed',
 }
-
-export enum SslEnforcementApplicationStatus {
-  Enforcing,
-  Disabling,
-  Completed,
-  Failed,
-}
-
 export interface RestartServicePayload {
   project_id: number
   service_names: ServiceNames[]
