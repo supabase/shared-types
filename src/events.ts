@@ -31,6 +31,7 @@ export enum ProjectEvents {
   ProjectServiceLifecycleChange = 'project.service_lifecycle_change',
   ProjectReadReplicaSetupStatusChange = 'project.read_replica_setup_status_change',
   ProjectVolumeAttributeModification = 'project.volume_modification',
+  ProjectRestoreFailed = 'project.restore_failed',
 }
 
 export enum ProjectDiskGrowth {
