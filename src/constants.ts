@@ -19,6 +19,7 @@ export const DEFAULT_REALTIME_SLOT_NAME_WITH_WALRUS = 'realtime_rls'
 
 export enum PermissionAction {
   ANALYTICS_READ = 'analytics:Read',
+  ANALYTICS_WRITE = 'analytics:Write',
   AUTH_EXECUTE = 'auth:Execute',
   BILLING_READ = 'billing:Read',
   BILLING_WRITE = 'billing:Write',
@@ -46,6 +47,8 @@ export enum PermissionAction {
 }
 
 export enum OAuthScope {
+  ANALYTICS_READ = 'analytics:Read',
+  ANALYTICS_WRITE = 'analytics:Write',
   AUTH_READ = 'auth:read',
   AUTH_WRITE = 'auth:write',
   DATABASE_READ = 'database:read',
