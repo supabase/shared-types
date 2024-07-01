@@ -47,8 +47,8 @@ export enum PermissionAction {
 }
 
 export enum OAuthScope {
-  ANALYTICS_READ = 'analytics:Read',
-  ANALYTICS_WRITE = 'analytics:Write',
+  ANALYTICS_READ = 'analytics:read',
+  ANALYTICS_WRITE = 'analytics:write',
   AUTH_READ = 'auth:read',
   AUTH_WRITE = 'auth:write',
   DATABASE_READ = 'database:read',
