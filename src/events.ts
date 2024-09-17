@@ -33,6 +33,7 @@ export enum ProjectEvents {
   ProjectVolumeAttributeModification = 'project.volume_modification',
   ProjectRestoreFailed = 'project.restore_failed',
   ProjectRestoreCancelled = 'project.restore_cancelled',
+  ProjectStorageArchiveCompleted = 'project.storage_archive_completed',
 }
 
 export enum ProjectDiskGrowth {
