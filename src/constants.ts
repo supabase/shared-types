@@ -18,6 +18,8 @@ export enum ServiceNames {
 export const DEFAULT_REALTIME_SLOT_NAME_WITH_WALRUS = 'realtime_rls'
 
 export enum PermissionAction {
+  ANALYTICS_ADMIN_READ = 'analytics:Admin:Read',
+  ANALYTICS_ADMIN_WRITE = 'analytics:Admin:Write',
   ANALYTICS_READ = 'analytics:Read',
   ANALYTICS_WRITE = 'analytics:Write',
   AUTH_EXECUTE = 'auth:Execute',
@@ -29,6 +31,8 @@ export enum PermissionAction {
   FUNCTIONS_WRITE = 'functions:Write',
   INFRA_EXECUTE = 'infra:Execute',
   READ = 'read:Read',
+  SECRETS_READ = 'secrets:Read',
+  SECRETS_WRTIE = 'secrets:Write',
   SQL_SELECT = 'sql:Read:Select',
   SQL_DELETE = 'sql:Write:Delete',
   SQL_INSERT = 'sql:Write:Insert',
