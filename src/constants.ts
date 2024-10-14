@@ -32,7 +32,7 @@ export enum PermissionAction {
   INFRA_EXECUTE = 'infra:Execute',
   READ = 'read:Read',
   SECRETS_READ = 'secrets:Read',
-  SECRETS_WRTIE = 'secrets:Write',
+  SECRETS_WRITE = 'secrets:Write',
   SQL_SELECT = 'sql:Read:Select',
   SQL_DELETE = 'sql:Write:Delete',
   SQL_INSERT = 'sql:Write:Insert',
