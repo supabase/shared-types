@@ -41,6 +41,8 @@ export enum PermissionAction {
   STORAGE_ADMIN_WRITE = 'storage:Admin:Write',
   STORAGE_READ = 'storage:Read',
   STORAGE_WRITE = 'storage:Write',
+  REALTIME_ADMIN_READ = 'realtime:Admin:Read',
+  REALTIME_ADMIN_WRITE = 'realtime:Admin:Write',
   TENANT_SQL_ADMIN_READ = 'tenant:Sql:Admin:Read',
   TENANT_SQL_ADMIN_WRITE = 'tenant:Sql:Admin:Write',
   TENANT_SQL_CREATE_TABLE = 'tenant:Sql:CreateTable',
