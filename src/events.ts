@@ -137,10 +137,16 @@ export interface RestartServicePayload {
   service_names: ServiceNames[]
 }
 
+export enum ServicesUpdateActionType {
+  Restart = 'restart',
+  Reload = 'reload',
+  None = 'none',
+}
+
 export interface UpdateConfigPayload {
   project_id: number
   service_names: ServiceNames[]
-  restart_services: boolean
+  action: ServicesUpdateActionType
   database_id?: number
 }
 
