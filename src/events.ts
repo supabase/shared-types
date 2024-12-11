@@ -26,6 +26,7 @@ export enum ProjectEvents {
   ProjectSoftwareUpgraded = 'project.software_upgraded',
   ProjectTransfered = 'project.transfered',
   ProjectPhysicalBackupTransition = 'project.physical_backup_transition',
+  ProjectPhysicalBackupIneligible = 'project.physical_backup_ineligible',
   ProjectIPv4AddressUpdate = 'project.network.ipv4_update',
   ProjectAddonUpdated = 'project.addon_updated',
   ProjectServiceLifecycleChange = 'project.service_lifecycle_change',
