@@ -25,7 +25,6 @@ export enum ProjectEvents {
   ProjectDiskGrowth = 'project.disk_growth',
   ProjectSoftwareUpgraded = 'project.software_upgraded',
   ProjectTransfered = 'project.transfered',
-  ProjectTransferredFromWarmPool = 'project.transfered_from_warm_pool',
   ProjectPhysicalBackupTransition = 'project.physical_backup_transition',
   ProjectPhysicalBackupIneligible = 'project.physical_backup_ineligible',
   ProjectIPv4AddressUpdate = 'project.network.ipv4_update',
@@ -36,6 +35,10 @@ export enum ProjectEvents {
   ProjectRestoreFailed = 'project.restore_failed',
   ProjectRestoreCancelled = 'project.restore_cancelled',
   ProjectStorageArchiveCompleted = 'project.storage_archive_completed',
+}
+
+export enum WarmProjectPoolEvents {
+  Transferred = 'transfered_from_warm_project_pool',
 }
 
 export enum ProjectCloningEvents {
