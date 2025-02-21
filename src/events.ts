@@ -4,6 +4,7 @@ import { ServiceNames } from './constants'
 export enum ProjectEvents {
   ProjectPaused = 'project.paused',
   ProjectRestored = 'project.restored',
+  ProjectRemoved = 'project.removed',
   ProjectRestoredFromLogicalBackup = 'project.restored_from_logical_backup',
   ProjectRestoredFromPitr = 'project.restored_from_pitr',
   ProjectRestoreInitiated = 'project.restore_initiated',
