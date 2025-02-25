@@ -37,6 +37,8 @@ export enum ProjectEvents {
   ProjectRestoreFailed = 'project.restore_failed',
   ProjectRestoreCancelled = 'project.restore_cancelled',
   ProjectStorageArchiveCompleted = 'project.storage_archive_completed',
+  ProjectClonedToTarget = 'project.cloned_to_target',
+  ProjectClonedFromSource = 'project.cloned_from_source',
 }
 
 export enum ProjectCloningEvents {
