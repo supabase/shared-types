@@ -10,16 +10,16 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     timeout-minutes: 4
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '22'
           cache: npm
           registry-url: 'https://registry.npmjs.org'
           scope: '@supabase'
