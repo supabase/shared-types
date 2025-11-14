@@ -29,6 +29,8 @@ export enum PermissionAction {
   DELETE = 'write:Delete',
   FUNCTIONS_READ = 'functions:Read',
   FUNCTIONS_WRITE = 'functions:Write',
+  FUNCTIONS_SECRET_READ = 'functions:Secret:Read',
+  FUNCTIONS_SECRET_WRITE = 'functions:Secret:Write',
   INFRA_EXECUTE = 'infra:Execute',
   READ = 'read:Read',
   SECRETS_READ = 'secrets:Read',
