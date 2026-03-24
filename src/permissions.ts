@@ -281,6 +281,14 @@ export const FgaPermissions = {
       id: 'project_snippets_write',
       title: 'Manage project code snippets',
     },
+    REALTIME_CONFIG_READ: {
+      id: 'realtime_config_read',
+      title: 'Read project realtime configuration',
+    },
+    REALTIME_CONFIG_WRITE: {
+      id: 'realtime_config_write',
+      title: 'Manage project realtime configuration',
+    },
     STORAGE_READ: {
       id: 'storage_read',
       title: 'Read project file storage',
