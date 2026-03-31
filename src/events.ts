@@ -39,6 +39,8 @@ export enum ProjectEvents {
   ProjectStorageArchiveCompleted = 'project.storage_archive_completed',
   ProjectClonedToTarget = 'project.cloned_to_target',
   ProjectClonedFromSource = 'project.cloned_from_source',
+  ProjectHibernationSuspended = 'project.hibernation_suspended',
+  ProjectHibernationWaken = 'project.hibernation_waken',
 }
 
 export enum ProjectCloningEvents {
