@@ -17,6 +17,13 @@ jobs:
           node-version: '22'
           cache: npm
 
+      # Make sure we can install latest so we don't get nasty surprises on main post-merge.
+      - name: Update npm
+        run: |
+          # Temporary fix for https://github.com/npm/cli/issues/9151
+          npm install -g npm@~11.11.0
+          npm install -g npm@latest
+
       - name: Run eslint
         run: |
           npm ci
