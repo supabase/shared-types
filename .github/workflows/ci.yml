@@ -19,7 +19,10 @@ jobs:
 
       # Make sure we can install latest so we don't get nasty surprises on main post-merge.
       - name: Update npm
-        run: npm install -g npm@latest
+        run: |
+          # Temporary fix for https://github.com/npm/cli/issues/9151
+          npm install -g npm@~11.11.0
+          npm install -g npm@latest
 
       - name: Run eslint
         run: |

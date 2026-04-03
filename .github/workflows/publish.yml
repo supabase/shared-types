@@ -30,6 +30,10 @@ jobs:
 
       # Ensure npm 11.5.1 or later is installed for trusted publishing support
       - name: Update npm
-        run: npm install -g npm@latest
+        run: |
+          # Temporary fix for https://github.com/npm/cli/issues/9151
+          npm install -g npm@~11.11.0
+          npm install -g npm@latest
+
       - run: npm ci
       - run: npm publish --access public
