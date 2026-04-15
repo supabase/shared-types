@@ -65,6 +65,14 @@ export const FgaPermissions = {
       id: 'advisors_read',
       title: 'Read project advisor recommendations',
     },
+    ANALYTICS_CONFIG_READ: {
+      id: 'analytics_config_read',
+      title: 'Read project analytics configurations',
+    },
+    ANALYTICS_CONFIG_WRITE: {
+      id: 'analytics_config_write',
+      title: 'Manage project analytics configurations',
+    },
     ANALYTICS_LOGS_READ: {
       id: 'analytics_logs_read',
       title: 'Read project log analytics',
