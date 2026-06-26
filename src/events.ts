@@ -43,6 +43,12 @@ export enum ProjectEvents {
   ProjectHibernationWaken = 'project.hibernation_waken',
 }
 
+export enum BranchEvents {
+  BranchPrOpened = 'branch.pr_opened',
+  BranchPrClosed = 'branch.pr_closed',
+  BranchCommitPushed = 'branch.commit_pushed',
+}
+
 export enum ProjectCloningEvents {
   ClonedFromSource = 'cloned_from_source',
   ClonedToTarget = 'cloned_to_target',
