@@ -43,6 +43,14 @@ export const FgaPermissions = {
       id: 'organization_projects_create',
       title: 'Create organization projects',
     },
+    PLATFORM_WEBHOOKS_READ: {
+      id: 'platform_webhooks_organization_read',
+      title: 'Access Platform Webhooks endpoints and deliveries',
+    },
+    PLATFORM_WEBHOOKS_WRITE: {
+      id: 'platform_webhooks_organization_write',
+      title: 'Manage Platform Webhooks endpoints and deliveries',
+    },
   },
   PROJECT: {
     ADMIN_READ: {
@@ -320,6 +328,14 @@ export const FgaPermissions = {
     VANITY_SUBDOMAIN_WRITE: {
       id: 'vanity_subdomain_write',
       title: 'Manage project vanity subdomain',
+    },
+    PLATFORM_WEBHOOKS_READ: {
+      id: 'platform_webhooks_projects_read',
+      title: 'Access Platform Webhooks endpoints and deliveries',
+    },
+    PLATFORM_WEBHOOKS_WRITE: {
+      id: 'platform_webhooks_projects_write',
+      title: 'Manage Platform Webhooks endpoints and deliveries',
     },
   },
 } as const
