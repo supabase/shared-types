@@ -41,6 +41,8 @@ export enum ProjectEvents {
   ProjectClonedFromSource = 'project.cloned_from_source',
   ProjectHibernationSuspended = 'project.hibernation_suspended',
   ProjectHibernationWaken = 'project.hibernation_waken',
+  ProjectCrossArchMigrationInitiated = 'project.cross_arch_migration_initiated',
+  ProjectCrossArchMigrationCompleted = 'project.cross_arch_migration_completed',
 }
 
 export enum BranchEvents {
