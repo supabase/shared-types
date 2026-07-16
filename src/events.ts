@@ -255,3 +255,13 @@ export type ProjectAddonUpdatedPayload = {
   old_addon_variant?: string
   new_addon_variant?: string
 }
+
+export type ProjectCrossArchMigrationInitiatedPayload = {
+  old_instance_type: string
+  new_instance_type: string
+}
+
+export type ProjectCrossArchMigrationCompletedPayload = {
+  old_instance_type: string
+  new_instance_type: string
+}
