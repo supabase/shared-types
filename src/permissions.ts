@@ -337,5 +337,13 @@ export const FgaPermissions = {
       id: 'platform_webhooks_projects_write',
       title: 'Manage Platform Webhooks endpoints and deliveries',
     },
+    WORKERS_READ: {
+      id: 'workers_read',
+      title: 'Read project workers',
+    },
+    WORKERS_WRITE: {
+      id: 'workers_write',
+      title: 'Manage project workers',
+    },
   },
 } as const
