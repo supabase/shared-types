@@ -353,5 +353,13 @@ export const FgaPermissions = {
       id: 'workers_write',
       title: 'Manage project workers',
     },
+    NOTEBOOKS_READ: {
+      id: 'project_notebooks_read',
+      title: 'Read project notebooks',
+    },
+    NOTEBOOKS_WRITE: {
+      id: 'project_notebooks_write',
+      title: 'Manage project notebooks',
+    },
   },
 } as const
