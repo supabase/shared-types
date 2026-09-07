@@ -93,6 +93,10 @@ export const FgaPermissions = {
       id: 'api_gateway_keys_read',
       title: 'Read project API keys',
     },
+    API_GATEWAY_KEYS_SECRET_READ: {
+      id: 'api_gateway_keys_secret_read',
+      title: 'Read project API key secrets. Grants elevated access.',
+    },
     API_GATEWAY_KEYS_WRITE: {
       id: 'api_gateway_keys_write',
       title: 'Manage project API keys. Grants elevated access.',
@@ -164,6 +168,10 @@ export const FgaPermissions = {
     DATA_API_CONFIG_READ: {
       id: 'data_api_config_read',
       title: 'Read project PostgREST behavior and settings',
+    },
+    DATA_API_CONFIG_SECRET_READ: {
+      id: 'data_api_config_secret_read',
+      title: 'Read project PostgREST JWT secret. Grants elevated access.',
     },
     DATA_API_CONFIG_WRITE: {
       id: 'data_api_config_write',
