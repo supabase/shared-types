@@ -27,6 +27,19 @@ export const FgaPermissions = {
       id: 'organization_admin_write',
       title: 'Manage organization settings and project transfers. Grants elevated access.',
     },
+    AUDIT_LOGS_READ: {
+      id: 'audit_logs_read',
+      title: 'Read organization audit logs',
+    },
+    BILLING_READ: {
+      id: 'billing_read',
+      title: 'Read organization billing and invoices',
+    },
+    BILLING_WRITE: {
+      id: 'billing_write',
+      title:
+        'Manage organization billing, subscription and payment methods. Grants elevated access.',
+    },
     MEMBERS_READ: {
       id: 'members_read',
       title: 'Read organization members',
@@ -275,7 +288,7 @@ export const FgaPermissions = {
     },
     INFRA_ADDONS_READ: {
       id: 'infra_add_ons_read',
-      title: 'Read project project infrastructure add-ons',
+      title: 'Read project infrastructure add-ons',
     },
     INFRA_ADDONS_WRITE: {
       id: 'infra_add_ons_write',
@@ -288,6 +301,10 @@ export const FgaPermissions = {
     INFRA_DISK_CONFIG_WRITE: {
       id: 'infra_disk_config_write',
       title: 'Manage project disk configuration',
+    },
+    OPERATIONS_WRITE: {
+      id: 'project_operations_write',
+      title: 'Perform developer level operations like restarting the project',
     },
     READ_REPLICAS_READ: {
       id: 'infra_read_replicas_read',
