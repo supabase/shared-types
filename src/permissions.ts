@@ -130,6 +130,14 @@ export const FgaPermissions = {
       id: 'auth_config_write',
       title: 'Manage project authentication settings',
     },
+    AUTH_HOOKS_READ: {
+      id: 'auth_hooks_read',
+      title: 'Read project authentication hooks',
+    },
+    AUTH_HOOKS_WRITE: {
+      id: 'auth_hooks_write',
+      title: 'Manage project authentication hooks',
+    },
     AUTH_SIGNING_KEYS_READ: {
       id: 'auth_signing_keys_read',
       title: 'Read project authentication signing keys',
@@ -137,6 +145,14 @@ export const FgaPermissions = {
     AUTH_SIGNING_KEYS_WRITE: {
       id: 'auth_signing_keys_write',
       title: 'Manage project authentication signing keys',
+    },
+    AUTH_USERS_READ: {
+      id: 'auth_users_read',
+      title: 'Read project authentication users',
+    },
+    AUTH_USERS_WRITE: {
+      id: 'auth_users_write',
+      title: 'Manage project authentication users',
     },
     BACKUPS_READ: {
       id: 'backups_read',
