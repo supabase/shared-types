@@ -21,11 +21,11 @@ export const FgaPermissions = {
   ORGANIZATION: {
     ADMIN_READ: {
       id: 'organization_admin_read',
-      title: 'Read organization settings',
+      title: 'Read organization details',
     },
     ADMIN_WRITE: {
       id: 'organization_admin_write',
-      title: 'Manage organization settings and project transfers. Grants elevated access.',
+      title: 'Manage organization details and project transfers. Grants elevated access.',
     },
     AUDIT_LOGS_READ: {
       id: 'audit_logs_read',
@@ -39,6 +39,14 @@ export const FgaPermissions = {
       id: 'billing_write',
       title:
         'Manage organization billing, subscription and payment methods. Grants elevated access.',
+    },
+    CONFIG_READ: {
+      id: 'organization_config_read',
+      title: 'Read organization configuration, such as integrations and OAuth apps',
+    },
+    CONFIG_WRITE: {
+      id: 'organization_config_write',
+      title: 'Manage organization configuration, such as integrations and OAuth apps',
     },
     MEMBERS_READ: {
       id: 'members_read',
