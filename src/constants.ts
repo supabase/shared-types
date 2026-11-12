@@ -85,6 +85,33 @@ export enum OAuthScope {
   STORAGE_WRITE = 'storage:write',
 }
 
+export const OAUTH_SCOPE_LABELS: Record<OAuthScope, string> = {
+  [OAuthScope.ANALYTICS_READ]: 'Analytics',
+  [OAuthScope.ANALYTICS_WRITE]: 'Analytics',
+  [OAuthScope.ANALYTICS_CONFIG_READ]: 'Analytics configuration',
+  [OAuthScope.ANALYTICS_CONFIG_WRITE]: 'Analytics configuration',
+  [OAuthScope.AUTH_READ]: 'Auth',
+  [OAuthScope.AUTH_WRITE]: 'Auth',
+  [OAuthScope.DATABASE_READ]: 'Database',
+  [OAuthScope.DATABASE_WRITE]: 'Database',
+  [OAuthScope.DOMAINS_READ]: 'Domains',
+  [OAuthScope.DOMAINS_WRITE]: 'Domains',
+  [OAuthScope.EDGE_FUNCTIONS_READ]: 'Edge Functions',
+  [OAuthScope.EDGE_FUNCTIONS_WRITE]: 'Edge Functions',
+  [OAuthScope.ENVIRONMENT_READ]: 'Environment',
+  [OAuthScope.ENVIRONMENT_WRITE]: 'Environment',
+  [OAuthScope.ORGANIZATIONS_READ]: 'Organizations',
+  [OAuthScope.ORGANIZATIONS_WRITE]: 'Organizations',
+  [OAuthScope.PROJECTS_READ]: 'Projects',
+  [OAuthScope.PROJECTS_WRITE]: 'Projects',
+  [OAuthScope.REST_READ]: 'PostgREST',
+  [OAuthScope.REST_WRITE]: 'PostgREST',
+  [OAuthScope.SECRETS_READ]: 'Secrets',
+  [OAuthScope.SECRETS_WRITE]: 'Secrets',
+  [OAuthScope.STORAGE_READ]: 'Storage',
+  [OAuthScope.STORAGE_WRITE]: 'Storage',
+}
+
 export enum SupportCategories {
   PROBLEM = 'Problem',
   DASHBOARD_BUG = 'Dashboard_bug',
