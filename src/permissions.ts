@@ -402,5 +402,21 @@ export const FgaPermissions = {
       id: 'project_notebooks_write',
       title: 'Manage project notebooks',
     },
+    ENVIRONMENT_VARIABLES_READ: {
+      id: 'environment_variables_read',
+      title: 'Read project environment variables',
+    },
+    ENVIRONMENT_VARIABLES_WRITE: {
+      id: 'environment_variables_write',
+      title: 'Manage project environment variables',
+    },
+    ENVIRONMENT_SECRETS_READ: {
+      id: 'environment_secrets_read',
+      title: 'Read project environment secret names',
+    },
+    ENVIRONMENT_SECRETS_WRITE: {
+      id: 'environment_secrets_write',
+      title: 'Manage project environment secrets',
+    },
   },
 } as const
